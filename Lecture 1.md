@@ -1,5 +1,6 @@
 ---
 theme: ./slidev-theme-penguin-rtl
+colorSchema: light
 class: text-center
 transition: slide-right
 title: "Lecture 4: Shape Descriptors & Template Matching"
