@@ -5,7 +5,7 @@ transition: slide-right
 title: "Lecture 4: Shape Descriptors & Template Matching"
 mdc: true
 author: Dr.Suhel AlHammoud & Dr. Ossama Nasser
-exportFilename: "4"
+exportFilename: "1"
 layout: cover
 ---
 # المحاضرة 1
