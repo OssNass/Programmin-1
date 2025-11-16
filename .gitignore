@@ -1,3 +1,8 @@
 /.obsidian
 /node_modules
 *.pdf
+
+*/node_modules
+dist
+
+
