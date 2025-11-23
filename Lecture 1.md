@@ -1,5 +1,6 @@
 ---
 theme: ./slidev-theme-penguin-rtl
+colorSchema: light
 class: text-center
 transition: slide-right
 title: "المحاضرة 1: مقدمة"
