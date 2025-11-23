@@ -2,7 +2,7 @@
 theme: ./slidev-theme-penguin-rtl
 class: text-center
 transition: slide-right
-title: "Lecture 4: Shape Descriptors & Template Matching"
+title: "المحاضرة 1: مقدمة"
 mdc: true
 author: Dr.Suhel AlHammoud & Dr. Ossama Nasser
 exportFilename: "1"

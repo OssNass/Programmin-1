@@ -17,6 +17,22 @@ html:not(.dark) #slide-content {
   
 }
 
+.katex, .katex-display, .katex-html {
+    direction: ltr !important;
+    unicode-bidi: isolate;
+}
+
+.mermaid{
+	direction:ltr;
+}
+
+.slidev-vclick-hidden{
+	display: none;
+}
+.code {
+  font-size: 2em; /* Adjust as needed */
+}
+
 li {
   margin-right: 1.1em !important;
   margin-left: 0 !important;
@@ -172,4 +188,12 @@ pre.shiki {
 
 code {
   @apply font-mono;
+}
+
+.justify-content-center{
+ justify-content:center;
+}
+
+.slidev-layout th{
+	text-align: center;
 }
