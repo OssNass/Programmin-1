@@ -17,5 +17,10 @@
   "license": "MIT",
   "devDependencies": {
     "sass-embedded": "^1.93.3"
+  },
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
   }
 }
