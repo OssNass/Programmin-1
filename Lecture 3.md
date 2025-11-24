@@ -56,7 +56,7 @@ highlighter: shiki
 </ul>
 </div>
 <div>
-```cpp{|3|4|5|6|1|2} style="font-size: 10em;
+```cpp{|3|4|5|6|1|2}
 #include<iostream>
 using namespace std;
 int main(){
