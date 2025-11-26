@@ -29,7 +29,8 @@ jobs:
         run: |
           if [ -f "package.json" ]; then
             yarn install
-          fi
+          fi 
+          cd slidev-theme-penguin-rtl && yarn install && cd ..
 
       - name: Install Slidev CLI
         run: yarn global add @slidev/cli
