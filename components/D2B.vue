@@ -2,10 +2,10 @@
 import {ref, computed} from 'vue'
 
 // Initialize 8 bits, all set to 0
-const bits = ref([0, 0, 0, 0, 0, 0, 0, 0])
+const bits = ref([0, 1, 0, 1, 1, 1, 0, 1].reverse())
 
 // Input decimal value
-const inputDecimal = ref(0)
+const inputDecimal = ref(93)
 
 // Toggle bit at specific index
 const toggleBit = (index) => {
@@ -40,6 +40,7 @@ const remainingValue = computed(() => {
           max="255"
           class="w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-white"
           placeholder="Enter a number (0-255)"
+
       />
     </div>
 

@@ -2,7 +2,7 @@
 import {ref, computed} from 'vue'
 
 // Initialize 8 bits, all set to 0
-const bits = ref([0, 0, 0, 0, 0, 0, 0, 0])
+const bits = ref([1, 0, 1, 0, 1,1, 0, 1])
 
 // Toggle bit at specific index
 const toggleBit = (index) => {

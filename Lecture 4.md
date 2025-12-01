@@ -293,6 +293,18 @@ void display() {
 
 ---
 
+# Two`s Complement
+
+<TwoC />
+
+---
+
+#  الأعداد ذات الإشارة بطريقة المتمم الثنائي Two`s Complement
+
+<TwoC2 />
+
+---
+
 <Ieee754 />
 
 ---
