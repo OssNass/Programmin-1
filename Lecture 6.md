@@ -208,7 +208,7 @@ do{
 using namespace std;
 
 int main(){
-  int x;
+  double x;
   do{
     cout << "Enter positive number: ";
     cin >> x;
@@ -400,12 +400,13 @@ for(;;){
   cout << "Enter the number of modules: ";
   cin >> n; // عدد المواد
 
+  int i = n;
   double sum = 0;
-  while(n > 0){ 
+  while(i > 0){ 
     int grade;
     cin >> grade;
     sum += grade;
-    n--;
+    i--;
   }
 
   double average = sum / n;
@@ -424,9 +425,10 @@ for(;;){
   int n;
   cout << "Enter the number of modules: ";
   cin >> n; // عدد المواد
-
+  
+  int i = n;
   double sum = 0;
-  while(n--){ 
+  while(i--){ 
     int grade;
     cin >> grade;
     sum += grade;
@@ -582,7 +584,8 @@ for(int i = 1; i <= 10; i++){
 - حلقة لانهائية
 - اقرأ العدد
 - اذا كان العدد سالبا أهمل بقية التعليمات لهذا المرور و ارجع إلى بداية الحلقة
-- إذا كان العدد يساوي صفرا عندها قم بالخروج من الحلقة نهائيا
+-    إذا كان العدد يساوي صفرا عندها قم بالخروج من الحلقة نهائياإلى نهاية البرنامج
+- إذا كان العدد موجبا احسب و اطبع الجذر التربيعي له ثم ارجع إلى بداية الحلقة
 
 ---
 
@@ -592,7 +595,8 @@ for(int i = 1; i <= 10; i++){
 
 ```cpp
 while(true){
-    int x; cin >> x;
+    cout << "x ? ";
+    double x; cin >> x;
 
     if(x < 0) continue; // تجاهل القيم السالبة
     if(x == 0) break; // اخرج من الحلقة عند الصفر
