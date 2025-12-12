@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import {ref, computed} from 'vue'
 
 // 32-bit IEEE754 single precision: 1 sign, 8 exponent, 23 fraction
 const bits = ref(Array(32).fill(0))
@@ -67,7 +67,7 @@ const floatValue = computed(() => {
 </script>
 
 <template>
-  <div class="p-6 flex flex-col items-center gap-6 w-full">
+  <div class="p-6 flex flex-col  items-center gap-6 w-full">
 
     <h2 class="text-xl font-bold mb-4">IEEE-754 Single Precision (32-bit Float)</h2>
 
@@ -96,7 +96,26 @@ const floatValue = computed(() => {
       </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-6">
+    <div class="grid grid-cols-3 gap-6">
+
+
+      <!-- ⭐ NEW: Mantissa explanation -->
+
+      <div class="w-full max-w-3xl p-4 rounded-xl bg-gray-100 dark:bg-gray-800 shadow">
+        <h3 class="font-bold mb-2 text-lg">Exponent Calculation</h3>
+
+        <div class="text-sm">
+          <div><strong>Exponent bits:</strong> {{ exponentInfo.bits }}</div>
+          <div><strong>Raw exponent (binary → int):</strong> {{ exponentInfo.raw }}</div>
+          <div><strong>Bias:</strong> {{ exponentInfo.bias }}</div>
+          <div><strong>Final exponent = raw − bias:</strong> {{ exponentInfo.finalExp }}</div>
+          <div class="mt-2">
+            <strong>Type:</strong>
+            <span class="font-semibold">{{ exponentInfo.type }}</span>
+          </div>
+        </div>
+      </div>
+
       <!-- ⭐ NEW: Exponent explanation -->
 
       <div class="w-full max-w-3xl p-4 rounded-xl bg-gray-100 dark:bg-gray-800 shadow">
@@ -131,14 +150,16 @@ const floatValue = computed(() => {
 
 <style scoped>
 
-.rev {
-  flex-direction: row-reverse;
+
+.flex {
+  direction: ltr;
 }
 
 .bit-box:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
 .bit-box:active {
   transform: translateY(0);
 }
