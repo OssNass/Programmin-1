@@ -6,7 +6,7 @@ transition: slide-right
 title: "المحاضرة  6: بنى التحكم - الجزء الثاني"
 mdc: true
 author: Dr.Suhel AlHammoud & Dr. Ossama Nasser
-exportFilename: "5"
+exportFilename: "6"
 layout: cover
 ---
 

@@ -394,6 +394,41 @@ int main(){
 	- في حال كان الطرف A يساوي 0 هذا يعني احتمال أن يكون B يساوي 1 وبالتالي ناتج الجمع المنطقي 1 وعليه يتم تنفيذ الجمع في هذه الحالة
 --- 
 
+# الشرط السريع
+- هي عملية المقارنة الشرطية القائمة على ?
+- مثال
+<div grid="~ cols-2 gap-4">
+<div>
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	if(n%2==0)
+		cout<<"Even"<<endl;
+	else
+		cout<<"Odd"<<endl;
+	return 0;
+}
+```
+</div>
+<div>
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	cout<<((n%2==0)?"Even":"Odd")
+		<<endl;
+	return 0;
+}
+```
+</div>
+</div>
+---
+
 # البنى الشرطية
 ## بنية Switch Case
 - هي بنية خاصة تسمح لنا باستبدال مجموعة من عبارات if else
@@ -439,9 +474,13 @@ switch(n){
 	case 1:
 		cout<<"1"<<endl;
 	default:
-		cout<<"unknown"<<endl;
-}
-return 0;}
+		cout<<"unknown"<<endl;}return 0;}
 ```
 </div>
 </div>
+---
+
+# ملاحظة هامة
+نسخة تفاعلية من المحاضرات متوفرة على الرابط :
+https://ossnass.github.io/Programmin-1/
+(مع مراعاة حالة الأحرف)

@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Gilroy ExtraBold';
+  font-family: 'IBM Plex Sans ExtraBold';
   font-style: normal;
   font-weight: bold;
   font-display: swap;
   src:
-    local('Gilroy ExtraBold'),
-    url('/fonts/Gilroy-ExtraBold.otf') format('opentype'),
-    url('/fonts/Gilroy-ExtraBold.woff') format('woff');
+    local('IBM Plex Sans ExtraBold'),
+    url('/fonts/IBM Plex Sans.otf') format('opentype'),
+    url('/fonts/IBM Plex Sans.woff') format('woff');
 }
