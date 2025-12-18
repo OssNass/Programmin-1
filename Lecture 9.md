@@ -1,12 +1,11 @@
 ---
-theme: ./slidev-theme-penguin-rtl
-colorSchema: dark
+theme: ./slidev-theme-penguin-rtl 
 class: text-center
 transition: slide-right
 title: "المحاضرة  9: المصفوفات (1)  Arrays"
 mdc: true
 author: Dr.Suhel AlHammoud & Dr. Ossama Nasser
-exportFilename: "8"
+exportFilename: "9"
 layout: cover
 ---
 
