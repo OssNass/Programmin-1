@@ -1,0 +1,7 @@
+import{_ as o}from"./slidev/CodeBlockWrapper.vue_vue_type_script_setup_true_lang-C-XQXTAO.js";import{b as p,o as m,w as n,g as s,e as u,m as c,aa as e,v as d,x as _,T as l}from"./modules/vue-DO2oJQnA.js";import{_ as f}from"./default-RGHKILw-.js";import{u as k,f as g}from"./slidev/context-BpUCL94e.js";import"./modules/unplugin-icons-BAhy1VAa.js";import"./index-BoePKj3u.js";import"./modules/shiki-KVXHvyik.js";const z={__name:"Lecture 8.md__slidev_21",setup(h){const{$clicksContext:t,$frontmatter:i}=k();return t.setup(),(x,a)=>{const r=o;return m(),p(f,d(_(l(g)(l(i),20))),{default:n(()=>[a[1]||(a[1]=s("h1",null,"مثال كبير قوي",-1)),a[2]||(a[2]=s("h2",null,"خرج البرنامج",-1)),u(r,c({},{title:"",ranges:[]}),{default:n(()=>[...a[0]||(a[0]=[s("pre",{class:"shiki shiki-themes solarized-dark solarized-light slidev-code",style:{"--shiki-dark":"#839496","--shiki-light":"#657B83","--shiki-dark-bg":"#002B36","--shiki-light-bg":"#FDF6E3"}},[s("code",{class:"language-text"},[s("span",{class:"line"},[s("span",null,"The dice  ")]),e(`
+`),s("span",{class:"line"},[s("span",null,"       1 16777  ")]),e(`
+`),s("span",{class:"line"},[s("span",null,"       2 16668  ")]),e(`
+`),s("span",{class:"line"},[s("span",null,"       3 16626  ")]),e(`
+`),s("span",{class:"line"},[s("span",null,"       4 16710  ")]),e(`
+`),s("span",{class:"line"},[s("span",null,"       5 16516  ")]),e(`
+`),s("span",{class:"line"},[s("span",null,"       6 16703")])])],-1)])]),_:1},16)]),_:1},16)}}};export{z as default};
