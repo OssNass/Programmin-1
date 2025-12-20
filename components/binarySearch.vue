@@ -35,8 +35,7 @@
 
       <p v-if="steps.length === 0">حدد القيمة واضغط بحث</p>
       <div v-else>
-        <p>الخطوة {{ currentStep + 1 }} / {{ steps.length }}</p>
-        <p>{{ currentStepData.description }}</p>
+        <p>الخطوة {{ currentStep + 1 }} / {{ steps.length }} {{ currentStepData.description }}</p>
 
     </div>
   </div>
