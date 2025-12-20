@@ -33,19 +33,19 @@ jobs:
           cd slidev-theme-penguin-rtl && yarn install && cd ..
 
       - name: Install Slidev CLI
-        run: yarn global add @slidev/cli
+        run: yarn -D add @slidev/cli
 
       - name: Build all root-level .md files
         run: |
-          mkdir -p dist
-          for file in Lecture*.md; do
-            [ -f "$file" ] || continue
-            name=$(basename "$file" .md)
-            echo "Building $file → dist/$name"
-            slidev build "$file" \
-              --out "dist/$name" \
-              --base "/${{ github.event.repository.name }}/$name/"
-          done
+           mkdir -p dist
+           for file in Lecture*.md; do
+              [ -f "$file" ] || continue
+              name=$(basename "$file" .md)
+              echo "Building $file → dist/$name"
+              yarn slidev build "$file" \
+                --out "dist/$name" \
+                --base "/${{ github.event.repository.name }}/$name/"
+           done
 
       - name: Generate index.html
         run: |
