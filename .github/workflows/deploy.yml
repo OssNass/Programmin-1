@@ -1,4 +1,4 @@
-name: Build Slidev lectures, deploy Pages, and upload artifacts (Node 22)
+name: Build Slidev lectures (HTML + PDF), deploy Pages, and upload artifacts
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
   pages: write
-  id-token: write   # required for Pages deployment
+  id-token: write
 
 jobs:
   build:
@@ -34,18 +34,30 @@ jobs:
           cd slidev-theme-penguin-rtl && yarn install && cd ..
 
       - name: Install Slidev CLI
-        run: yarn -D add @slidev/cli
+        run: yarn add -D @slidev/cli
 
-      - name: Build all root-level .md files
+      # Install Playwright dependencies required for PDF export
+      - name: Install Playwright dependencies
+        run: |
+          npx playwright install --with-deps chromium
+
+      - name: Build HTML and export PDFs
         run: |
           mkdir -p dist
+          mkdir -p pdf
+
           for file in Lecture*.md; do
             [ -f "$file" ] || continue
             name=$(basename "$file" .md)
-            echo "Building $file → dist/$name"
+
+            echo "Building HTML for $file"
             yarn slidev build "$file" \
               --out "dist/$name" \
               --base "/${{ github.event.repository.name }}/$name/"
+
+            echo "Exporting PDF for $file"
+            yarn slidev export "$file" \
+              --output "pdf/$name.pdf"
           done
 
       - name: Generate index.html
@@ -56,13 +68,6 @@ jobs:
           <head>
             <meta charset="UTF-8" />
             <title>Lectures</title>
-            <style>
-              body { font-family: sans-serif; padding: 40px; }
-              h1 { margin-bottom: 20px; }
-              ul { line-height: 2; font-size: 1.2em; }
-              a { text-decoration: none; color: #0070f3; }
-              a:hover { text-decoration: underline; }
-            </style>
           </head>
           <body>
             <h1>Available Lectures</h1>
@@ -71,7 +76,7 @@ jobs:
 
           for dir in dist/*/; do
             name=$(basename "$dir")
-            echo "              <li><a href=\"./$name/\">$name</a></li>" >> dist/index.html
+            echo "              <li><a href=\"./$name/\">$name (HTML)</a></li>" >> dist/index.html
           done
 
           cat >> dist/index.html << 'EOF'
@@ -80,14 +85,14 @@ jobs:
           </html>
           EOF
 
-      # ✅ Upload downloadable artifact
-      - name: Upload build artifacts
+      # ✅ Upload PDFs as downloadable artifact
+      - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: slidev-lectures
-          path: dist
+          name: slidev-pdfs
+          path: pdf
 
-      # ✅ Deploy to GitHub Pages
+      # ✅ Deploy HTML version to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
