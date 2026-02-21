@@ -117,12 +117,12 @@ li {
   code {
     @apply text-secondary-700;
 
-    font-size: 0.875rem !important;
+    font-size: 0.6rem !important;
     direction: ltr;
   }
 
   :not(pre)>code {
-    font-size: 0.9em;
+    font-size: 0.7em;
     background: transparent;
     @apply font-light py-0.5 rounded;
   }

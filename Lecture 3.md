@@ -624,7 +624,7 @@ int main(){
 - مربعات متوازي الأضلاع تعني عمليات إدخال وإخراج
 - المعين يعني عملية شرطية
 </div>
-<div style="transform: scale(0.8); transform-origin: top left;">
+<div style="transform: scale(0.5); transform-origin: top left;">
 ```mermaid
 flowchart TD
 A[/"Enter values of a,b,c"/]
