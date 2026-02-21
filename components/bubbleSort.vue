@@ -43,7 +43,7 @@
 <span :class="lineClass(1)">1  procedure bubbleSort(A):</span>
 <span :class="lineClass(2)">2    n = length(A)</span>
 <span :class="lineClass(3)">3    for i from 0 to n-1:</span>
-<span :class="lineClass(4)">4      for j from 0 to n-i-2:</span>
+<span :class="lineClass(4)">4      for j from 0 to n-i-1:</span>
 <span :class="lineClass(5)">5        if A[j] > A[j+1]:</span>
 <span :class="lineClass(6)">6          swap A[j], A[j+1]</span></code>    </pre></div>
   </div>

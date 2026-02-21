@@ -1,4 +1,4 @@
-name: Deploy multiple Slidev lectures with Yarn (Node 22)
+name: Build Slidev lectures, deploy Pages, and upload artifacts (Node 22)
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write   # required for Pages deployment
 
 jobs:
   build:
@@ -29,7 +30,7 @@ jobs:
         run: |
           if [ -f "package.json" ]; then
             yarn install
-          fi 
+          fi
           cd slidev-theme-penguin-rtl && yarn install && cd ..
 
       - name: Install Slidev CLI
@@ -37,15 +38,15 @@ jobs:
 
       - name: Build all root-level .md files
         run: |
-           mkdir -p dist
-           for file in Lecture*.md; do
-              [ -f "$file" ] || continue
-              name=$(basename "$file" .md)
-              echo "Building $file → dist/$name"
-              yarn slidev build "$file" \
-                --out "dist/$name" \
-                --base "/${{ github.event.repository.name }}/$name/"
-           done
+          mkdir -p dist
+          for file in Lecture*.md; do
+            [ -f "$file" ] || continue
+            name=$(basename "$file" .md)
+            echo "Building $file → dist/$name"
+            yarn slidev build "$file" \
+              --out "dist/$name" \
+              --base "/${{ github.event.repository.name }}/$name/"
+          done
 
       - name: Generate index.html
         run: |
@@ -79,6 +80,14 @@ jobs:
           </html>
           EOF
 
+      # ✅ Upload downloadable artifact
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: slidev-lectures
+          path: dist
+
+      # ✅ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
