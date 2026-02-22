@@ -8,6 +8,9 @@ author: Dr.Suhel AlHammoud & Dr. Ossama Nasser
 exportFilename: "3"
 layout: cover
 highlighter: shiki
+export:
+  timeout: 60000
+  wait: 10000
 ---
 # المحاضرة 3
 ## أساسيات C++

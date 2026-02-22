@@ -7,6 +7,9 @@ mdc: true
 author: Dr.Suhel AlHammoud & Dr. Ossama Nasser
 exportFilename: "10"
 layout: cover
+export:
+  timeout: 60000
+  wait: 10000
 ---
 
 # المحاضرة 10
