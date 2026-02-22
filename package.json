@@ -2,6 +2,7 @@
   "dependencies": {
     "@slidev/cli": "^52.4.0",
     "@slidev/theme-seriph": "^0.25.0",
+    "mermaid": "^11.12.3",
     "playwright-chromium": "^1.56.1",
     "slidev-theme-hep": "^0.1.1",
     "slidev-theme-mokkapps": "^1.3.2",
@@ -21,6 +22,6 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "export": "slidev export"
+    "export": "slidev export --timeout 60000"
   }
 }

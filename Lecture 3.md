@@ -624,25 +624,7 @@ int main(){
 - مربعات متوازي الأضلاع تعني عمليات إدخال وإخراج
 - المعين يعني عملية شرطية
 </div>
-<div style="transform: scale(0.5); transform-origin: top left;">
-```mermaid
-flowchart TD
-A[/"Enter values of a,b,c"/]
-A --> B["Compute Δ = b² - 4ac"]
-
-B --> C{"Δ > 0?"}
-C -- Yes --> D["Two real roots"]
-C -- No --> E{"Δ == 0?"}
-
-E -- Yes --> F["One real root"]
-E -- No --> G["Two complex roots"]
-
-D --> H["End"]
-F --> H
-G --> H
-
-```
-</div>
+<img src="./images/2/chart.png" style="width: 75%">
 </div>
 ---
 

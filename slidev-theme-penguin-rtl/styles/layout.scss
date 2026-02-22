@@ -27,8 +27,8 @@ html:not(.dark) #slide-content {
 }
 
 .line{
-font-size: 1.8rem !important;
-line-height: 1.9rem !important;
+font-size: 1.0rem !important;
+line-height: 1.1rem !important;
   text-wrap-mode: wrap;
 }
 
@@ -117,12 +117,12 @@ li {
   code {
     @apply text-secondary-700;
 
-    font-size: 0.6rem !important;
+    font-size: 0.875rem !important;
     direction: ltr;
   }
 
   :not(pre)>code {
-    font-size: 0.7em;
+    font-size: 0.9em;
     background: transparent;
     @apply font-light py-0.5 rounded;
   }
